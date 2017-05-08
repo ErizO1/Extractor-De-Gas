@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>iDomotics</title>
+	<link rel="stylesheet" href="css/material.min.css">
+	<link rel="stylesheet" href="css/style.css">
+	<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+
+</head>
+<body>
+	<!-- Always shows a header, even in smaller screens. -->
+	<div class="mdl-layout mdl-js-layout mdl-layout--fixed-header">
+	  <header class="mdl-layout__header">
+	    <div class="mdl-layout__header-row">
+	      <!-- Title -->
+	      <span class="mdl-layout-title">iDomotics</span>
+	      <!-- Add spacer, to align navigation to the right -->
+	      <div class="mdl-layout-spacer"></div>
+	      <!-- Navigation. We hide it in small screens. -->
+	      <nav class="mdl-navigation mdl-layout--large-screen-only">
+	        <!-- Right aligned menu below button -->
+	        <button id="demo-menu-lower-right" class="mdl-button mdl-js-button">
+	        	<span>Juancho</span>
+	          <i class="material-icons">account_circle</i>
+	        </button>
+
+	        <ul class="mdl-menu mdl-menu--bottom-right mdl-js-menu mdl-js-ripple-effect"
+	            for="demo-menu-lower-right">
+	          <li class="mdl-menu__item">Cerrar sesión</li>
+	        </ul>
+	      </nav>
+	    </div>
+	  </header>
+	  <div class="mdl-layout__drawer">
+	    <span class="mdl-layout-title">Juancho</span>
+	    <nav class="mdl-navigation">
+	      <a class="mdl-navigation__link" href="">Cerrar sesión</a>
+	    </nav>
+	  </div>
+	  <main class="mdl-layout__content">
+	    <div class="page-content">
+	    	<!-- Your content goes here -->
+	    	<div class="mdl-grid">
+	    		
+		    	<div class="mdl-cell mdl-cell--8-col mdl-card mdl-shadow--2dp mdl-grid">
+			    	<div class="mdl-cell mdl-cell--4-col-desktop mdl-cell--4-col-tablet no-margin">
+			    		<i class="material-icons status-icon">cloud_queue</i>
+			    		<div class="mdl-card__title no-padding m-top10">
+			    			<h5 class="no-margin">ACTIVO</h5>
+			    		</div>
+			    		<p class="mdl-card__supporting-text no-padding">Conexión a servidor</p>
+				    </div>
+		    		<div class="mdl-cell mdl-cell--4-col-desktop mdl-cell--4-col-tablet no-margin">
+				    	<i class="material-icons status-icon">wifi_tethering</i>
+		    			<div class="mdl-card__title no-padding m-top10">
+			    			<h5 class="no-margin">ACTIVO</h5>
+			    		</div>
+			    		<p class="mdl-card__supporting-text no-padding">Conexión a sensor</p>
+		    		</div>
+		    		<div class="mdl-cell mdl-cell--4-col-desktop mdl-cell--4-col-tablet no-margin">
+		    			<i class="material-icons status-icon">toys</i>
+						<div class="mdl-card__title no-padding m-top10">
+			    			<h5 class="no-margin status-extractor">APAGADO</h5>
+			    			<label class="mdl-switch mdl-js-switch mdl-js-ripple-effect" for="statusExtractor">
+			    			  <input type="checkbox" id="statusExtractor" class="mdl-switch__input">
+			    			</label>
+			    		</div>		    		
+			    		<p class="mdl-card__supporting-text no-padding">Estado del ventilador</p>
+		    		</div>
+			    </div>
+
+	    	</div>
+	    </div>
+	  </main>
+	</div>
+	<script src="js/material.js"></script>
+</body>
+</html>
+
