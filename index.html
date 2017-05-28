@@ -4,15 +4,11 @@
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<title>iDomotics</title>
-	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
-	<script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
-	<script type="text/javascript" src="https://www.google.com/jsapi"></script>
-	<script type="text/javascript" src="js/chart.js"></script>
-	<script src="js/material.js"></script>
 	<link rel="stylesheet" href="css/material.min.css">
 	<link rel="stylesheet" href="css/style.css">
+	<link rel="stylesheet" href="css/jquery-ui.css">
 	<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
-
+    <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro" rel="stylesheet">
 </head>
 <body>
 	<!-- Always shows a header, even in smaller screens. -->
@@ -53,34 +49,58 @@
 			    	<div class="mdl-cell mdl-cell--4-col-desktop mdl-cell--4-col-tablet no-margin">
 			    		<i class="material-icons status-icon">cloud_queue</i>
 			    		<div class="mdl-card__title no-padding m-top10">
-			    			<h5 class="no-margin">ACTIVO</h5>
+			    			<h5 class="status-title">ACTIVO</h5>
 			    		</div>
-			    		<p class="mdl-card__supporting-text no-padding">Conexión a servidor</p>
-				    </div>
+			    		<p class="mdl-card__supporting-text status-title">Conexión a servidor</p>
+			    	</div>
 		    		<div class="mdl-cell mdl-cell--4-col-desktop mdl-cell--4-col-tablet no-margin">
-				    	<i class="material-icons status-icon">wifi_tethering</i>
+				    	<i class="material-icons status-icon">bluetooth_connected</i>
 		    			<div class="mdl-card__title no-padding m-top10">
-			    			<h5 class="no-margin">ACTIVO</h5>
+			    			<h5 class="status-title">ACTIVO</h5>
 			    		</div>
-			    		<p class="mdl-card__supporting-text no-padding">Conexión a sensor</p>
+			    		<p class="mdl-card__supporting-text status-title">Conexión a sensor</p>
 		    		</div>
 		    		<div class="mdl-cell mdl-cell--4-col-desktop mdl-cell--4-col-tablet no-margin">
 		    			<i class="material-icons status-icon">toys</i>
 						<div class="mdl-card__title no-padding m-top10">
-			    			<h5 class="no-margin status-extractor">APAGADO</h5>
+			    			<h5 class="status-title status-extractor">APAGADO</h5>
 			    			<label class="mdl-switch mdl-js-switch mdl-js-ripple-effect" for="statusExtractor">
 			    			  <input type="checkbox" id="statusExtractor" class="mdl-switch__input">
 			    			</label>
 			    		</div>		    		
-			    		<p class="mdl-card__supporting-text no-padding">Estado del ventilador</p>
+			    		<p class="mdl-card__supporting-text status-title">Estado del ventilador</p>
 		    		</div>
-				<div id="chart_div2" class="chart"></div>
+                          
 			    </div>
-
+                   
+                <div class="mdl-cell mdl-cell--8-col mdl-grid" style="padding-left:0; padding-right:0;">
+                    <input id="datepicker" >
+                </div>
+			    		    			    	
+			    <div class="mdl-cell mdl-cell--8-col mdl-card mdl-shadow--2dp mdl-grid">
+				    <div id="chart_div2" class="chart"></div>
+			    </div>
 	    	</div>
 	    </div>
 	  </main>
 	</div>
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+    <script src="js/jquery-ui/jquery-ui.js"></script>
+	<script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+	<script type="text/javascript" src="https://www.google.com/jsapi"></script>
+	<script type="text/javascript" src="js/chart.js"></script>
+	<script src="js/material.js"></script>
+	<script>
+      $( function() {
+        $( "#datepicker" ).datepicker({
+            constrainInput: true,
+            showOn: 'both',
+            buttonText: '<i class="material-icons">event</i>',
+            showButtonPanel: true,
+            dateFormat: 'DD dd MM, yy'
+        });
+      });
+    </script>
 </body>
 </html>
 

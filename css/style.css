@@ -1,3 +1,10 @@
+*{
+    font-family: 'Source Sans Pro', sans-serif;
+}
+.centrar {
+    margin-right: auto;
+    margin-left: auto;
+}
 .mdl-button {
   color: white;
   text-transform: none;
@@ -6,14 +13,16 @@
 	min-height: auto;
 }
 .no-padding{
-	padding-bottom: 0px;
-	padding-top: 0px;
-	padding-left: 55px;
+    padding-top: 0;
+    padding-bottom: 0;
 }
 .status-icon{
 	position: absolute;
-	font-size: 48px !important;
-	margin-top: 5px;
+	font-size: 30px !important;
+	margin-top: 10px;
+    margin-left: 31px;
+    border-right: 1px solid darkgray; 
+    padding-right: 7px; 
 }
 .m-top10{
 	margin-top: 10px;
@@ -39,3 +48,115 @@ p{
   width: 100%; 
   min-height: 450px;
 }
+
+.status-title {
+    box-sizing: border-box;
+    margin-top: 0;    
+	padding-top: 0px;
+    padding-bottom: 0px;
+    margin-bottom: 0;
+}
+
+h5.status-title {
+    margin-left: 25px;
+    font-size: 16px !important;
+}
+
+ p.status-title  {
+	padding-left: 55px;
+}
+
+label.mdl-switch {
+    margin-top: -8px;
+}
+
+@media (max-width: 1772px){
+    h5.status-title {
+        margin-left: 32px;
+    } 
+    .status-icon {
+        margin-left: 3px;
+    }
+    p.status-title  {
+        padding-left: 47px;
+    }
+}
+
+input{
+    background-color: white;
+    font-size: 1.2em;
+    border: 1px solid gray;
+    border-right: 0;
+    text-align: center;
+    min-width: 220px;
+    max-width: 250px;
+    width: 50%;
+    border-top-left-radius: 3px;
+    border-bottom-left-radius: 3px;
+}
+
+input:focus, button{
+    outline: none;
+}
+
+@media (min-width: 840px) and (max-width: 960px){
+    h5.status-title {
+        margin-left: -9px;
+    } 
+    .status-icon {
+        display: none !important;
+    }
+    p.status-title  {
+        padding-left: 5px;
+    }
+}
+
+@media (min-width: 480px) and (max-width: 839px){
+    .mdl-cell--4-col,
+    .mdl-cell--4-col-tablet.mdl-cell--4-col-tablet {
+        width: calc(33.33% - 16px); 
+    }
+    h5.status-title {
+        margin-left: 30px;
+    } 
+    .status-icon {
+        margin-left: 0;
+        margin-right: 3px;
+    }
+    p.status-title  {
+        padding-left: 45px;
+    }
+}
+
+@media (min-width: 480px) and (max-width: 579px){
+    h5.status-title {
+        margin-left: -10px;
+    } 
+    .status-icon {
+        display: none !important;
+    }
+    p.status-title  {
+        padding-left: 5px;
+    }
+}
+
+@media (min-width: 307px) and (max-width: 480px){
+    input{
+        width: auto;
+        font-size: 1em;
+        padding-right: 0;
+        margin-left: auto;
+        
+    }
+    .ui-datepicker-trigger{
+        margin-right: auto;
+    }
+}
+
+@media (max-width: 306px){
+    input{
+        min-width: 80%;
+        font-size: .9em;
+    }
+}
+
